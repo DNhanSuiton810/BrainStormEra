@@ -1,2 +1,2 @@
-# SWP391
-This project is designed with the purpose of SWP391 subject
+# BrainStormEra
+This is an online course and degree management system project, built with .NET Core technology.

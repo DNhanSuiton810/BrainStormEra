@@ -6,7 +6,6 @@
         public string user_id { get; set; }
         public string enrollment_id { get; set; }
         public string payment_description { get; set; }
-
         public double payment_price { get; set; }
         public string payment_status { get; set; }
         public DateTime payment_date { get; set; }

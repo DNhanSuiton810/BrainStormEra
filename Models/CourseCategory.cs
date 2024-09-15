@@ -1,7 +1,10 @@
-﻿namespace BrainStormEra.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BrainStormEra.Models
 {
     public class CourseCategory
     {
+        [Key]
         public string course_category_id { get; set; }
         
         public string course_category_name { get; set; }

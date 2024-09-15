@@ -1,14 +1,19 @@
-﻿namespace BrainStormEra.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BrainStormEra.Models
 {
     public class Lesson
     {
+        [Key]
         public string lesson_id { get; set; }
         public string lesson_name { get; set; }
         public string lesson_description { get; set; }
+        [ForeignKey("Chapter")]
         public string chapter_id { get; set; }
         public int lesson_status { get; set; }
         public int lesson_type { get; set; }
-        public string lesson_content { get; set; }
+        public string? lesson_content { get; set; }
         public Lesson() { }
 
         public Lesson(string lesson_id, string lesson_name, string lesson_description, string chapter_id, int lesson_status, int lesson_type, string lesson_content)

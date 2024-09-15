@@ -1,7 +1,10 @@
-﻿namespace BrainStormEra.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BrainStormEra.Models
 {
     public class UserAccount
     {
+        [Key]
         public string user_id { get; set; }
         public string user_role { get; set; }
         public string username { get; set; }
@@ -12,8 +15,7 @@
         public string gender { get; set; }
         public string phone_number { get; set; }
         public string user_address { get; set; }
-
-        public string user_picture { get; set; }
+        public string? user_picture { get; set; }
 
         public UserAccount() { }
 

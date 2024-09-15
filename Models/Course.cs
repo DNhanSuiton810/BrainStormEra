@@ -1,15 +1,17 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace BrainStormEra.Models
 {
     public class Course
     {
+        [Key]
         public string course_id { get; set; }
         public string course_name { get; set; }
         public string course_description { get; set; }
-        public string course_price { get; set; }
+        public string? course_price { get; set; }
         public int course_status { get; set; }
-        public string course_picture { get; set; }
+        public string? course_picture { get; set; }
         public Course() { }
 
         public Course(

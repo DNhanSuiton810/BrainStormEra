@@ -1,12 +1,18 @@
-﻿namespace BrainStormEra.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BrainStormEra.Models
 {
     public class Payment
     {
+        [Key]
         public string payment_id { get; set; }
+        [ForeignKey("UserAccount")]
         public string user_id { get; set; }
+        [ForeignKey("Enrollment")]
         public string enrollment_id { get; set; }
-        public string payment_description { get; set; }
-        public double payment_price { get; set; }
+        public string? payment_description { get; set; }
+        public double? payment_price { get; set; }
         public string payment_status { get; set; }
         public DateTime payment_date { get; set; }
         public Payment() { }

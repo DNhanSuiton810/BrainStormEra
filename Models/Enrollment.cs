@@ -1,9 +1,15 @@
-﻿namespace BrainStormEra.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BrainStormEra.Models
 {
     public class Enrollment
     {
+        [Key]
         public string enrollment_id { get; set; }
+        [ForeignKey("UserAccount")]
         public string user_id { get; set; }
+        [ForeignKey("Course")]
         public string course_id { get; set; }
         public DateTime enrollment_date { get; set; }
 

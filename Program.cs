@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using BrainStormEra.DBConnection;
+using BrainStormEra.Data;
 
 namespace BrainStormEra
 {
@@ -9,14 +9,12 @@ namespace BrainStormEra
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            // Registering DBConnection with the connection string from appsettings.json
-            builder.Services.AddDbContext<BrainStormEra.DBConnection.DBConnection>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
             // Add MVC services
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<DBContext>(option =>
+            {
+                option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

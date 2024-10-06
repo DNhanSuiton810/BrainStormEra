@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrainStormEra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfb0493e4699a09dc50a6a1481eef7709c53877b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d32f973ef698d6b862cb2e449d5a653512e764df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrainStormEra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrainStormEra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

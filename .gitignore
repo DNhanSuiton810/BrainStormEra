@@ -1,0 +1,3 @@
+# Don't add folder .vs and file appsetting.json
+.vs/
+appsetting.json
